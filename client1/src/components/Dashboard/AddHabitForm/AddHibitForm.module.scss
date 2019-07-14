@@ -1,0 +1,11 @@
+
+@import "../../../scss/constants";
+
+.addHabitForm {
+    font-family: $mainFont;
+    color: $darkGreyThemeColor;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}

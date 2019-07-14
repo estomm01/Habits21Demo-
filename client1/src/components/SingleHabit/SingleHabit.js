@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './SingleHabit.module.css';
+// import styles from './SingleHabit.module.scss';
 
 class SingleHabit extends Component {
 
@@ -24,14 +24,14 @@ class SingleHabit extends Component {
                 </div>
                 <div className={ styles.progressArea }>
                     <div className={ styles.daysArea }>
-                        {/* { days.map(el =>
+                        { days.map(el =>
                             <SingleDay
                                 key={ el.dayNo }
                                 habitKey={ this.props.index }
                                 toggleDayAsMarked={ this.props.toggleDayAsMarked }
                                 { ...el }
                             />
-                        )} */}
+                        )}
                     </div>
                     <div className={ styles.progress }>
                         <div>

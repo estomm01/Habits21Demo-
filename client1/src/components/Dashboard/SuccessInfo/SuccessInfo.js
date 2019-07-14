@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import styles from './SuccessInfo.module.css';
+//import styles from './SuccessInfo.module.scss';
 //import successsImage from '../../../images
 
 class SuccessInfo extends Component {
@@ -19,7 +19,7 @@ class SuccessInfo extends Component {
     render() {
         return (
             <div className={ styles.successInfo }>
-                {/* <img src={ successsImage } alt='finish line image'/> */}
+                <img src={ successsImage } alt='finish line image'/>
                 <p>You have successfully developed a new habit.</p>
                 <p>Congratulations!</p>
                 <button className={ styles.button } onClick={ this.redirectToNewHabitForm }>Start new habit</button>

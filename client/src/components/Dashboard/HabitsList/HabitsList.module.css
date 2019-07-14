@@ -1,0 +1,10 @@
+/*
+@import "../../../scss/constants";
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 15% auto;
+    background-color: $grayBackgroundColor;
+    color: $darkGreyThemeColor;
+} */
