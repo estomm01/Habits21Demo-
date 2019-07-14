@@ -43,9 +43,9 @@ class AddHabitForm extends Component {
        // return this.nameRef
 
         return (
-            // <form className={ styles.addHabitForm } onSubmit={ this.createHabit }>
-            //     <h3 className={ styles.formHeader }>Add new habit</h3>
-            //     <div className={ styles.question }>
+            <form className={ styles.addHabitForm } onSubmit={ this.createHabit }>
+                <h3 className={ styles.formHeader }>Add new habit</h3>
+                <div className={ styles.question }>
                     <p>What habit do you what do work on?</p>
                     <input
                         name="name"
