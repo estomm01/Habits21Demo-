@@ -18,7 +18,8 @@ function App() {
 
     <div>
     <Nav />
-    <AddHabitForm/>
+    {/* <AddHabitForm/> */}
+    <Dashboard />
      {/* <HabitList/> */}
     </div>
   );

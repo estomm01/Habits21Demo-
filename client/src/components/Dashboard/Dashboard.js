@@ -19,7 +19,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    const { params } = this.props.match;
+    //const { params } = this.props.match;
 
     // this.ref = syncState(`${params.dashboardId}/habits`, {
     //   context: this,
@@ -46,6 +46,7 @@ class Dashboard extends Component {
   }
 
   addHabit = habit => {
+    console.log('Habitfrom addhabbit', habit)
     const habits = { ...this.state.habits };
     habits[`habit${Date.now()}`] = habit;
     this.setState({ habits });
@@ -55,7 +56,7 @@ class Dashboard extends Component {
     const habits = { ...this.state.habits };
     habits[habitKey] = updatedHabit;
     this.setState({ habits });
-}
+  }
 
   deleteHabit = habitKey => {
     const habits = { ...this.state.habits };
@@ -89,9 +90,22 @@ class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        { this.props.userId === this.props.owner && this.props.logged
-          ? <HabitsList
-            addHabit={ this.addHabit }
+        <HabitsList
+          addHabit={ this.addHabit}
+          deleteHabit={this.deleteHabit}
+          habits={this.state.habits}
+          toggleDayAsMarked={this.toggleDayAsMarked}
+          showNewHabitForm={this.showNewHabitForm}
+          isNewHabitFormShown={this.state.isNewHabitFormShown}
+          closeNewHabitForm={this.closeNewHabitForm}
+          updateHabit={this.updateHabit}
+          isSuccessModalShown={this.state.isSuccessModalShown}
+          closeSuccessModal={this.closeSuccessModal}
+        />
+        {/*  { this.props.userId === this.props.owner && this.props.logged
+          ?
+           <HabitsList
+            addHabit={() => this.addHabit }
             deleteHabit={ this.deleteHabit }
             habits={ this.state.habits }
             toggleDayAsMarked={ this.toggleDayAsMarked }
@@ -102,8 +116,8 @@ class Dashboard extends Component {
             isSuccessModalShown = { this.state.isSuccessModalShown }
             closeSuccessModal = { this.closeSuccessModal }
           />
-          : <div>Log in to see the dashboard</div>
-        }
+          : <div>Log in to see the dashboard</div> */}
+        {/* } */}
       </React.Fragment>
     );
   }

@@ -32,7 +32,7 @@ class AddHabitForm extends Component {
             progress: 0,
             days: this.daysArrayForHabit(duration)
         }
-
+        console.log(habit)
         this.props.addHabit(habit);
         this.props.closeNewHabitForm();
         e.currentTarget.reset();
